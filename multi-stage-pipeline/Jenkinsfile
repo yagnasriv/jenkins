@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'maven:latest' }
+        docker { image 'java-dockerfile:latest' }
       }
       steps {
         sh 'mvn --version'
