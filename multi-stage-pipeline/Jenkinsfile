@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'yagnasriv/java-dockerfile:latest' }
+        docker { image 'nginx:latest' }
       }
       steps {
-        sh 'mvn --version'
+        sh 'nginx --version'
       }
     }
     stage('Front-end') {
