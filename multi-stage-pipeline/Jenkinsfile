@@ -1,0 +1,21 @@
+pipeline {
+  agent none
+  stages {
+    stage('Back-end') {
+      agent {
+        docker { image 'yagnasriv/java-dockerfile:tagname' }
+      }
+    //   steps {
+    //     sh 'mvn --version'
+    //   }
+    }
+    stage('Front-end') {
+      agent {
+        docker { image 'yagnasriv/image1:tagname' }
+      }
+    //   steps {
+    //     sh 'node --version'
+    //   }
+    }
+  }
+}
